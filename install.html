@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<title>今日の気分はバリいくつ？ インストーラー</title>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script>
+$(function(){
+    $("#install").on("click", function(){
+        install();
+    });
+});
+var install = function() {
+    var manifestUrl = 'http://blog.bari-ikutsu.com/manifest.webapp';
+    var installLocFind = navigator.mozApps.install(manifestUrl);
+    installLocFind.onsuccess = function(data) {
+        // App is installed, do something if you like
+    };
+    installLocFind.onerror = function() {
+        // App wasn't installed, info is in
+        // installapp.error.name
+        alert(installLocFind.error.name);
+    };
+};
+</script>
+</head>
+<body>
+<div class="container">
+    <h3>今日の気分はバリいくつ？<br/>Firefox OS インストーラー</h3>
+    <button id="install" class="btn btn-default btn-block">インストール</button>
+</div>
+</body>
+</html>

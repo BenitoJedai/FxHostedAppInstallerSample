@@ -1,0 +1,16 @@
+{
+    "name": "バリいくつ？",
+    "description": "「今日の気分はバリいくつ？」Webサイトです。",
+    "launch_path": "/",
+    "icons": {
+        "512": "/bari-ikutsu_icon_round_512.png",
+        "128": "/bari-ikutsu_icon_round_128.png"
+    },
+    "developer": {
+        "name": "吉川英一（えど）",
+        "url": "http://blog.bari-ikutsu.com"
+    },
+    "chrome": { "navigation": true },
+    "version": "1.0",
+    "default_locale": "ja"
+}

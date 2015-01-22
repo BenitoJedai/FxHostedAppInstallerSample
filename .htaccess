@@ -1,0 +1,18 @@
+Redirect permanent /archives/ http://seesaa.bari-ikutsu.com/archives/
+Redirect permanent /category/ http://seesaa.bari-ikutsu.com/category/
+Redirect permanent /article/ http://seesaa.bari-ikutsu.com/article/
+
+#for Firefox
+AddType application/x-web-app-manifest+json .webapp
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
